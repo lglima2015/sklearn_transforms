@@ -1,7 +1,7 @@
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.impute import SimpleImputer
 import numpy as np
-
+import pandas as pd
 # All sklearn Transforms must have the `transform` and `fit` methods
 class DropColumns(BaseEstimator, TransformerMixin):
     def __init__(self, columns):
@@ -43,7 +43,7 @@ class MyOverSampler(TransformerMixin):
         pass
     
     def fit(self, X, y=None):
-        max_size = X['PERFIL'].value_counts().max()
+        max_size = y['PERFIL'].value_counts().max()
         self.max_size = max_size
         return self
 
