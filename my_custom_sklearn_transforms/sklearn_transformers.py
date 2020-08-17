@@ -43,7 +43,7 @@ class MyOverSampler(TransformerMixin):
         pass
     
     def fit(self, X, y=None):
-        max_size = y['PERFIL'].value_counts().max()
+        max_size = X['PERFIL'].value_counts().max()
         self.max_size = max_size
         return self
 
