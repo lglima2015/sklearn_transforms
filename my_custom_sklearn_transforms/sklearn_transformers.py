@@ -1,6 +1,5 @@
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.impute import SimpleImputer
-from imblearn.over_sampling import RandomOverSampler
 import numpy as np
 
 # All sklearn Transforms must have the `transform` and `fit` methods
